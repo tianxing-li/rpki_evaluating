@@ -49,4 +49,4 @@ prefixRipe.py: input a prefix, output the ASN who could publish the prefix in a 
 
 ip2version.py: input a date and an IP, output all the RP versions used by the IP on that day
 
-version2ip.py: input a date and an RP version, and output all the IPs who still used that version of RP on that day. Could use Fuzzy search, like "Routinator" or "Routinator/0.12.1."
+version2ip.py: input a date and an RP version, and output all the IPs who still used that version of RP on that day. We could use a fuzzy search, such as "Routinator" or "Routinator/0.12.1."
