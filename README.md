@@ -20,6 +20,8 @@ worldROVScore.py: input "cone-size" or "addresses" based on the current input li
 
 ## apnic roa and rpki
 
+### apnic roa
+
 apnic roas: a summary of all ROAs from all over the world; use RP to see how many ROAs are valid
 
 apnicRoas.py: input a date and a country name, output the ipv4/6 valid/invalid/unknown routes/address
@@ -30,11 +32,13 @@ Routes is the ratio of advertised routes an ROA covers to the total route count.
 
 Address is the ratio of the span of advertised addresses that an ROA covers to the total address span.
 
-
+### apnic rpki
 
 apnic rpki: measure invalid ROV throw-away situation, check if the network is ROV-aware
 
 apnicRpki.py: input a date and a country name, output the date last 1/10/30/60/90 day test results in number and percentage of routes\partial_validate_routes\validate_routes checked
+
+apnicRpkiAS.py: input a date and a AS number, output the AS filtering on that day, based on 7/14/28/112 days.
 
 ## Ripe ROA data
 
@@ -49,4 +53,4 @@ prefixRipe.py: input a prefix, output the ASN who could publish the prefix in a 
 
 ip2version.py: input a date and an IP, output all the RP versions used by the IP on that day
 
-version2ip.py: input a date and an RP version, and output all the IPs who still used that version of RP on that day. We could use a fuzzy search, such as "Routinator" or "Routinator/0.12.1."
+version2ip.py: input a date and an RP version, and output all the IPs who still used that version of RP on that day. We could use a fuzzy search, such as "Routinator" or "Routinator/0.12.1." 
