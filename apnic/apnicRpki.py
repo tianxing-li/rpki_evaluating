@@ -21,7 +21,9 @@ def country_Code(region):
                 return(row[0])
             
 
-def get_rpki(date, cc):
+def get_rpki(date, cn):
+    cc = country_Code(cn)
+
     url = "https://stats.labs.apnic.net/cgi-bin/json-table.pl?x=" + cc
     try:
         response = requests.get(url)
@@ -54,6 +56,7 @@ print(country_Code('Northern Europe'))
 print(country_Code('Afghanistan'))
 '''
 
+'''
 # input a date
 inputDate = input("input a date like YYY-MM-DD:")
 
@@ -65,4 +68,4 @@ data = get_rpki(inputDate, country_Code(inputRegion))
 for key, value in data.items():
     print(key + ": " + str(value))
 
-
+'''

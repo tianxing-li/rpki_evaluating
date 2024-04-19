@@ -21,12 +21,20 @@ def countries(countryName):
             return item['countryCode']
 
 
-def rov_country_ratios(countryNameISO, date):
+def rov_country_ratios(cn, date):
+    # country name transfer
+    countryNameISO = countries(cn)
+    
     # Build URL
     url = 'https://api.rovista.netsecurelab.org/rovista/api/ROV-country-adoption-ratios?country-iso=' + countryNameISO
     # Request GET
-    response = requests.get(url)
-    data = {}
+    try:
+        response = requests.get(url)
+        response.raise_for_status()
+        
+    except requests.exceptions.RequestException as e:
+        print("Error fetching JSON:", e)
+        return None
 
 
     # Check Response Status
@@ -36,13 +44,19 @@ def rov_country_ratios(countryNameISO, date):
     else:
         print("Requests Failed:", response.status_code)
 
+
+
     for item in data:
         if item['countryDateKey']['recordDate'] == date:
-            print(item)
+            return(item)
+    else:
+        return({cn: "Data not founded."})
 
+
+'''
 
 #test code
 inputCN = input("Input an country name like Germany:")
 inputDate = input("Input an date like 2024-04-01:")
-cn = countries(inputCN)
-rov_country_ratios(cn, inputDate)
+rov_country_ratios(inputCN, inputDate)
+'''

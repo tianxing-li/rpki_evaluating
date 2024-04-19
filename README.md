@@ -63,3 +63,5 @@ version2ip.py: input a date and an RP version, and output all the IPs who still 
 ## AS information categorization
 
 asInfo.py: input a date and an AS number, output all the aboved data sources relative information.
+
+countryInfo.py: input a date and a country/region name, output the country's ROV Ratios & currently ROV score by ROVISTA, and ROA data and invalid ROV throw-away situation by APNIC
