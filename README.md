@@ -26,6 +26,8 @@ apnic roas: a summary of all ROAs from all over the world; use RP to see how man
 
 apnicRoas.py: input a date and a country name, output the ipv4/6 valid/invalid/unknown routes/address
 
+apnicRoaAS: input a date and AS number, calculated the sum of all the countres' roa data and output the sum.
+
 Ps: 
 
 Routes is the ratio of advertised routes an ROA covers to the total route count.
@@ -54,3 +56,10 @@ prefixRipe.py: input a prefix, output the ASN who could publish the prefix in a 
 ip2version.py: input a date and an IP, output all the RP versions used by the IP on that day
 
 version2ip.py: input a date and an RP version, and output all the IPs who still used that version of RP on that day. We could use a fuzzy search, such as "Routinator" or "Routinator/0.12.1." 
+
+
+# Data Categorization
+
+## AS information categorization
+
+asInfo.py: input a date and an AS number, output all the aboved data sources relative information.

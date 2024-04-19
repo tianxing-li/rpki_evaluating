@@ -13,7 +13,7 @@ def find_childAS(file_path, asn):
                     childlist.append(line[len(prefix):-len(suffix)-1])
             # print(f"Not found begins with '{prefix}' and ends with '{suffix}'")
     except FileNotFoundError:
-        print("file not found")
+        print("local caida data not found")
     return childlist
 
 def find_parentAS(file_path, asn):
@@ -30,7 +30,7 @@ def find_parentAS(file_path, asn):
                     parentlist.append(line[:-len(suffix)-1])
             # print(f"Not found ends with '{suffix}'")
     except FileNotFoundError:
-        print("file not found")
+        print("local caida data not found")
     return parentlist
 
 def find_peerAS(file_path, asn):
@@ -49,10 +49,20 @@ def find_peerAS(file_path, asn):
                     p2plist.append(line[:-len(suffixEnd)-1])
             # print(f"Not found begins with '{prefix}' and ends with '{suffix}'")
     except FileNotFoundError:
-        print("file not found")
+        print("local caida data not found")
     return p2plist
 
+def as_Rel(date, asn):
+    date = date.replace("-", "")[:6]
+    file_path = "data/" + date +"01.as-rel2.txt"
+    childas = find_childAS(file_path, asn)
+    parentas = find_parentAS(file_path, asn)
+    p2pas = find_peerAS(file_path, asn)
+    return(childas, parentas, p2pas)
 
+
+
+'''
 # test code
 asn = input("Input an ASN:")
 date = "20240301"
@@ -69,3 +79,4 @@ print("parent list")
 print(parentas)
 print("p2p list")
 print(p2pas)
+'''

@@ -16,13 +16,19 @@ def rov_inference(asn, date):
     else:
         print("Requests Failed:", response.status_code)
 
+    return(data)
 
+'''
     asn = int(asn)
 
     for item in data:
         print(item)
+'''
 
 
+
+'''
 inputASN = input("Input an ASN like 3356:")
 inputDate = input("Input an Date like 2024-04-01:")
 rov_inference(inputASN, inputDate)
+'''

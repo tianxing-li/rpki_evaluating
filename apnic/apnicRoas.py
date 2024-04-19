@@ -5,7 +5,7 @@ import requests
 
 def country_Code(region):
     # open csv file
-    with open('apnic.csv', mode='r') as file:
+    with open('data/apnic.csv', mode='r') as file:
 
         # creat csv reader
         csvReader = csv.reader(file, delimiter='\t')

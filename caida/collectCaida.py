@@ -3,14 +3,15 @@ import bz2
 import os
 
 
-def caidadata_download(str):
+def caidadata_download(date):
+    date = date.replace("-", "")[:6]
     # data download link
-    url = "https://publicdata.caida.org/datasets/as-relationships/serial-2/"+str+".as-rel2.txt.bz2"
+    url = "https://publicdata.caida.org/datasets/as-relationships/serial-2/"+ date +"01.as-rel2.txt.bz2"
     
     # print(url)
 
     # download data link
-    download_path = str + ".as-rel2.txt.bz2"
+    download_path = "data/" + date + "01.as-rel2.txt.bz2"
 
     # data download
     response = requests.get(url)
@@ -22,7 +23,7 @@ def caidadata_download(str):
         print("Download Failed")
 
     # decompress data set
-    output_path = str + ".as-rel2.txt"
+    output_path = "data/" + date + "01.as-rel2.txt"
     with open(download_path, 'rb') as f:
         compressed_data = f.read()
 
@@ -36,7 +37,8 @@ def caidadata_download(str):
     os.remove(download_path)
     print("Compressed Data is Deleted")
 
-
+'''
 #test code
 acdate = input("please input a date in yyyymmdd format：")
 caidadata_download(acdate)
+'''

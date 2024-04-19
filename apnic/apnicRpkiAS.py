@@ -35,12 +35,12 @@ def get_rpki_as(date, asn):
     url = "https://stats.labs.apnic.net/cgi-bin/rpki-json-table.pl?x=" + asn
     rawData = fetch_data(url)
     if rawData:
-        save_data_to_file(rawData, asn + "rpki_data.json")
+        save_data_to_file(rawData, "data/" + asn + "rpki_data.json")
     else:
         return("Failed to fetch data.")
 
 
-    data = find_text_in_json(asn + "rpki_data.json", '"date": "' + date + '"')
+    data = find_text_in_json("data/" + asn + "rpki_data.json", '"date": "' + date + '"')
     
     # data = json.loads(response.text.replace("'", '"'), strict=False)
     # print(data.type())
@@ -59,7 +59,7 @@ def get_rpki_as(date, asn):
     return(data)
 
 
-
+'''
 # input a date
 inputDate = input("input a date like YYY-MM-DD:")
 
@@ -69,3 +69,4 @@ inputASN = input("input a AS number like 199140:")
 record = get_rpki_as(inputDate, inputASN)
 
 print(record)
+'''

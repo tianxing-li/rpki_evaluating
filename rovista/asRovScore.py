@@ -16,12 +16,17 @@ def rov_ratios(asn, date):
     else:
         print("Requests Failed:", response.status_code)
 
+    return(data)
+'''
     for item in data:
         if item['asnDateKey']['recordDate'] == date:
             print(item)
+'''
 
+'''
 
 #test code
 inputASN = input("Input an ASN like 3356:")
 inputDate = input("Input an date like 2024-04-01:")
 rov_ratios(inputASN, inputDate)
+'''

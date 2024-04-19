@@ -70,10 +70,12 @@ def get_roa_as(date, asn):
 
     data_sum = caculate_data(value, date, asn)
 
-    return(value, data_sum)
+    return(data_sum)
+
+    # return(value, data_sum)
 
 
-
+'''
 # input a date
 inputDate = input("input a date like YYY-MM-DD:")
 
@@ -86,3 +88,4 @@ for item in data:
     print(item)
 
 print(datasum)
+'''

@@ -2,7 +2,7 @@ import json
 
 def pre_ripe(tal, pre):
     # file path
-    json_file_path = tal + ".output.json"
+    json_file_path = "data/" + tal + ".output.json"
     asn = []
 
     # read data

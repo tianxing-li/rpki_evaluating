@@ -14,7 +14,9 @@ def as_rov_info(asn):
     else:
         print("Requests Failed:", response.status_code)
 
+    return(data)
 
+'''
     asn = int(asn)
 
     for item in data['data']:
@@ -31,7 +33,9 @@ def as_rov_info(asn):
             break
     else:
         print("ASN not found:", asn)
+'''
 
-
+'''
 inputASN = input("Input an ASN:")
 as_rov_info(inputASN)
+'''

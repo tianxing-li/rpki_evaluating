@@ -9,9 +9,9 @@ def data_download(tal, date):
     # URL define
     url = "https://ftp.ripe.net/rpki/" + tal + ".tal/" + date + "/output.json.xz"
     # file path define
-    file_path = "output.json.xz"
+    file_path = "data/output.json.xz"
     # output path defin
-    output_path = tal + ".output.json"
+    output_path = "data/" + tal + ".output.json"
 
     # data downloading
     # print("begin...")
@@ -31,8 +31,15 @@ def data_download(tal, date):
     os.remove(file_path)
     # print("downloaded file deleted")
 
+def tal_loop(date):
+    date = date.replace("-", "/")
+    for tal in ["afrinic", "lacnic", "apnic", "arin", "ripencc"]:
+        data_download(tal, date)
 
+
+'''
 inputDate = input("Input an date like 2024-04-01:")
 date = inputDate.replace("-", "/")
 for tal in ["afrinic", "lacnic", "apnic", "arin", "ripencc"]:
     data_download(tal, date)
+'''
