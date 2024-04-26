@@ -20,7 +20,7 @@ def version2ip(date, rpv):
         
 
     # database connection
-    conn = sqlite3.connect('../man/data/krill1-log.sqlite')
+    conn = sqlite3.connect('../data/krill1-log.sqlite')
 
     # build cursor
     cursor = conn.cursor()

@@ -1,0 +1,11 @@
+{
+  "copyright": "(c) APNIC Pty/Ltd. re-use with attribution permitted",
+  "description": "bulk data from I-ROV measurement as a time series with 7, 14, 38 and 112 day sliding window counts",
+  "docs": "https://data1.labs.apnic.net/ipv6-data-format.html",
+  "data": [
+{
+"7":  {"seen": 1, "filtered": 0, "filter_rate": 100.000000}, "14":  {"seen": 1, "filtered": 0, "filter_rate": 100.000000}, "28":  {"seen": 1, "filtered": 0, "filter_rate": 100.000000}, "112":  {"seen": 1, "filtered": 0, "filter_rate": 100.000000}, "date": "2024-02-05", "as": "AS21158", , "updated": "2024-04-20:22:56:49"}
+  }
+  ]
+}
+
