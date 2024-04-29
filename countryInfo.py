@@ -10,7 +10,7 @@ def main():
     cn = input("please input a country/region name like Germany:")
 
     # rovista/rovCountryRatios
-    print("\nrovista ROV Country Rattios: ")
+    print("\nrovista ROV Country Ratios: ")
     cnRatios = rovista.rovCountryRatios.rov_country_ratios(cn, dataDate)
     for key in cnRatios:
         print(key, cnRatios[key])
