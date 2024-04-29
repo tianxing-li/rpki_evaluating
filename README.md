@@ -65,3 +65,8 @@ version2ip.py: input a date and an RP version, and output all the IPs who still 
 asInfo.py: input a date and an AS number, output all the aboved data sources relative information.
 
 countryInfo.py: input a date and a country/region name, output the country's ROV Ratios & currently ROV score by ROVISTA, and ROA data and invalid ROV throw-away situation by APNIC
+
+
+## ip to asn
+
+plese download the RP database under the data folder, then use the ipdata.py to build a new table, this table build connection between ip address and AS number. In the new table (ip_info), there four columns: ip(key), asn, country and nic_hdl. Because the limitation of the whois access, we could use ipupdate.py to update the ip realationship.
